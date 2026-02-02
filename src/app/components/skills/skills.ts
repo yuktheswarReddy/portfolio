@@ -22,7 +22,7 @@ export interface Skill {
 })
 export class SkillsComponent {
   readonly allSkills: Skill[] = [
-    { name: 'Java', path: 'assets/images/java.png', years: 4, category: 'language' },
+    { name: 'Java', path: 'assets/images/java-icon.svg', years: 4, category: 'language' },
     { name: 'Angular', path: 'assets/images/angular-icon.svg', years: 6, category: 'framework' },
     { name: 'TypeScript', path: 'assets/images/typescript-icon.svg', years: 6, category: 'language' },
     { name: 'JavaScript', path: 'assets/images/javascript-icon.svg', years: 7, category: 'language' },
