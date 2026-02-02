@@ -29,7 +29,7 @@ describe('HeroComponent', () => {
   it('should have correct initial values', () => {
     expect(component.name).toBe('R Yuktheswar Reddy');
     expect(component.location).toBe('Hyderabad, Telangana - India');
-    expect(component.email).toBe('vitordb91@gmail.com');
+    expect(component.email).toBe('yuktheswarreddy@gmail.com');
     expect(component.titleKey).toBe('HERO.TITLE');
   });
 

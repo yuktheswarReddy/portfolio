@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/portfolio-vitor/browser",
+  "outputDirectory": "dist/portfolio/browser",
   "rewrites": [
     {
       "source": "/(.*)",

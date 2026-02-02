@@ -32,7 +32,7 @@ describe('UserService', () => {
       language: 'TypeScript',
       created_at: '2023-01-01T00:00:00Z',
       fork: false,
-      owner: { login: 'vitorbarbo' },
+      owner: { login: 'yuktheswarReddy' },
     }];
 
     service.fetchGitRepos().subscribe((repos) => {
@@ -40,17 +40,17 @@ describe('UserService', () => {
       expect(repos[0].name).toBe('test-repo');
     });
 
-    const req = httpMock.expectOne('https://api.github.com/users/vitorbarbo/repos');
+    const req = httpMock.expectOne('https://api.github.com/users/yuktheswarReddy/repos');
     expect(req.request.method).toBe('GET');
     req.flush(mockRepos);
   });
 
   it('should fetch repo languages', () => {
     const mockLanguages = { TypeScript: 1000, HTML: 500 };
-    service.fetchRepoLanguages('vitorbarbo', 'test-repo').subscribe((languages) => {
+    service.fetchRepoLanguages('yuktheswarReddy', 'test-repo').subscribe((languages) => {
       expect(languages.TypeScript).toBe(1000);
     });
-    const req = httpMock.expectOne('https://api.github.com/repos/vitorbarbo/test-repo/languages');
+    const req = httpMock.expectOne('https://api.github.com/repos/yuktheswarReddy/test-repo/languages');
     req.flush(mockLanguages);
   });
 });

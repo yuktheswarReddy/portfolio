@@ -18,7 +18,7 @@ export class UserService {
 
   fetchGitRepos(): Observable<GitHubRepo[]> {
     if (!this.cache$) {
-      this.cache$ = this.http.get<GitHubRepo[]>('https://api.github.com/users/vitorbarbo/repos').pipe(
+      this.cache$ = this.http.get<GitHubRepo[]>('https://api.github.com/users/yuktheswarReddy/repos').pipe(
         shareReplay(1)
       );
     }
