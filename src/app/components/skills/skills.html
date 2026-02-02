@@ -1,0 +1,22 @@
+<section class="skills">
+  <div class="skills__container">
+    <div class="skills__header">
+      <h2 class="skills__title">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <app-skill-filter-dropdown (filterChange)="onFilterChange($event)"></app-skill-filter-dropdown>
+    </div>
+    <div class="skills__grid">
+      @for (skill of skills(); track trackBySkillName($index, skill)) {
+        <div class="skills__card">
+          <div class="skills__card-inner">
+            <div class="skills__card-front">
+              <img class="skills__icon" [src]="skill.path" [alt]="skill.name">
+            </div>
+            <div class="skills__card-back">
+              <span class="skills__years">{{ skill.years }} {{ 'SKILLS.YEARS' | translate }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
